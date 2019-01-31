@@ -1,9 +1,24 @@
-### 1. Introduction:
+### Introduction:
 Ap Application get data from NASA
 
-### 2. Features:
+### Features:
 - Search data from NASA
 - Add to Collection
 - Filter data
 - Sort data
 - Edit & Delete 
+
+### Installation
+```bash
+yarn
+```
+
+Run dev server
+```bash
+yarn start
+```
+
+Build app
+```bash
+yarn build
+```
