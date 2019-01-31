@@ -1,0 +1,124 @@
+.modal-overlay, .modal-video {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease-in-out;
+
+  &.modal-video {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    visibility: visible;
+
+    .video-player {
+      border-radius: 5px;
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-wrap {
+      text-align: center;
+      position: absolute;
+      width: 900px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
+
+    .modal-heading {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      margin-bottom: 5px;
+
+      .close-btn {
+        color: #ffffff;
+        font-size: 20px;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 5px;
+      }
+    }
+
+    .modal-title {
+      color: rgba(255,255,255,0.75);
+      font-size: 35px;
+      font-weight: 400;
+      letter-spacing: -0.84px;
+      line-height: 42px;
+    }
+  }
+}
+
+.active-modal {
+  visibility: visible;
+  opacity: 1;
+
+  .form-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.form-modal {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  max-width: 607px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px 25px;
+  transition: all .5s cubic-bezier(0.13,-1.07, 0.81, 1.96);
+
+  .modal-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+
+    .modal-title {
+      color: #000000;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.58px;
+      line-height: 29px;
+      opacity: 0.75;
+    }
+  }
+
+  .input-field {
+    margin-bottom: 30px;
+    border-radius: 3px;
+
+    label {
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .modal-video {
+    .modal-wrap {
+      width: 90% !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .modal-video {
+    .modal-title {
+      font-size: 24px !important;
+      line-height: 32px !important;
+      margin-bottom: 20px;
+    }
+  }
+}

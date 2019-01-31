@@ -1,0 +1,77 @@
+/* MIXIN
+   ----------------------------- */
+
+   @mixin font($font) {
+    font-family: $font, sans-serif;
+  }
+  
+  @mixin hoverColor ($color) {
+    transition: all .2s ease-in-out;
+  
+    &:hover {
+      color: $color;
+    }
+  }
+  
+  @mixin scrollBar($width, $color-bar) {
+    &::-webkit-scrollbar {
+      width: $width;
+      background: #555555;
+  }
+  
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 30px;
+        background: #555555;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-bar;
+      border-radius: 30px;
+      outline: 1px solid slategrey;
+    }
+  }
+  
+  @mixin placeholderColor($color) {
+    color: $color;
+  
+    /* Chrome/Opera/Safari */
+    &::-webkit-input-placeholder {
+      color: $color;
+    }
+  
+    /* Firefox 19+ */
+    &::-moz-placeholder {
+      color: $color;
+    }
+  
+    /* IE 10+ */
+    &:-ms-input-placeholder {
+      color: $color;
+    }
+  
+    /* Firefox 18- */
+    &:-moz-placeholder  {
+      color: $color;
+    }
+  }
+  
+  @mixin colorOwlNav($color) {
+    .owl-nav [class*='owl-']:hover {
+      background: $color !important;
+    }
+  }
+  
+  
+  // Extends
+  %display-inline {
+    display: inline-table;
+  }
+  
+  %font-weight {
+    font-weight: 600;
+  }
+  
+  p {
+    @include hoverColor(ble);
+  }

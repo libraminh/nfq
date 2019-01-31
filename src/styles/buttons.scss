@@ -1,0 +1,28 @@
+.btn {
+  border-radius: 3px;
+  min-height: 33px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.11px;
+  line-height: 17px;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease-in-out;
+
+  .icon {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
+
+.btn--purple {
+  background-color: #784CC0;
+
+  &:hover {
+    background-color: #976BE2;
+  }
+}
