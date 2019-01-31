@@ -76,7 +76,7 @@ export class Search extends Component {
 
         <FormModal isModal={isModal} formItem={formItem} />
 
-        <p className="result-total" style={{display: items.length > 0 ? 'block' : 'none' }} >{`${items.length} result for ${name}`}</p>
+        <p className="result-total" style={{display: products.length > 0 ? 'block' : 'none' }} >{`${products.length} result for ${name}`}</p>
 
         {isLoading ? <Loader style={{marginBottom: '20px;'}} /> : '' }
 
