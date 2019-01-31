@@ -18,7 +18,7 @@ export class Search extends Component {
   componentWillReceiveProps(nextProps) {
     const products = nextProps.products
     if(products && products.length > 0) {
-      this.setState({ isLoading: false})
+      this.setState({ isLoading: false })
     }
   }
 
@@ -104,7 +104,7 @@ export class Search extends Component {
             )
           })}
         </div>
-       
+        
       </div>
     )
   }
