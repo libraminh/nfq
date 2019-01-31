@@ -1,1 +1,7 @@
 node_modules
+build
+.gitignore
+firebase.json
+.firebaserc
+yarn.locks
+.firebase
